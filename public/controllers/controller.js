@@ -7,5 +7,7 @@ myApp.controller('AppCtrl',[
     '$http',
     function($scope, $http){
         console.log('Testing');
+
+        $scope.addNickname()
     }
 ]);
