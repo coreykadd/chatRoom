@@ -9,9 +9,9 @@ var socket = require('socket.io');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
-app.get('/', function(req, res){
+/*app.get('/', function(req, res){
     res.send('hello');
-});
+});*/
 
 app.listen(8080, function(){
     console.log('Listening on port 8080');

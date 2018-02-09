@@ -1,11 +1,31 @@
 <!--index.html-->
 
-<html>
-    <head>
-        <title>Chat Room</title>
-    </head>
+<html ng-app="myApp">
 
-    <body>
+<head>
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="index.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="controllers/controller.js"></script>
+</head>
 
-    </body>
+<body ng-controller="AppCtrl">
+    <div class="container">
+        <h1>Welcome to the Chat Room</h1>
+        <div>
+            <textarea>
+                <ul>{{nickname}} : {{message}}</ul>
+            </textarea>
+            <br>
+            <input class="form-control" ng-model="message" placeholder="Send a message"></input>
+            <button class="btn btn-info" ng-click="sendMessage()">Send</button>
+        </div>
+        <br>
+        <input id="nicknameInput" ng-model="nickname" placeholder="Enter nickname"></input>
+        <button class="btn btn-primary" ng-click="addNickname()">nickname</button>
+        <h4>Your nickname: {{nickname}}</h4>
+    </div>
+</body>
+
 </html>
